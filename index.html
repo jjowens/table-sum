@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table Sum</title>
+    <style type="text/css">
+        h2 {font-family: "Arial Black"; text-align: center;}
+        table {
+            width: 45%; border: 1px black solid; padding: 2px; margin: 0px; margin-left: auto; margin-right: auto;
+        }
+        td {text-align: center;}
+        .last-row {
+            background-color: lemonchiffon;
+        }
+        .last-column {
+            background-color: lemonchiffon;
+        }
+    </style>
+    <script type="application/javascript" src="table-sum.js"></script>
+    <script type="application/javascript">
+        function batchUpdateSumCells(tableID) {
+            updateAllSumCells(tableID, "sum-14");
+
+            updateSumCell(tableID, "cols", "sum-1", 0);
+            updateSumCell(tableID, "cols", "sum-2", 1);
+            updateSumCell(tableID, "cols", "sum-3", 2);
+
+            updateSumCell(tableID, "rows", "sum-4", 0);
+            updateSumCell(tableID, "rows", "sum-5", 1);
+            updateSumCell(tableID, "rows", "sum-6", 2);
+            updateSumCell(tableID, "rows", "sum-7", 3);
+            updateSumCell(tableID, "rows", "sum-8", 4);
+            updateSumCell(tableID, "rows", "sum-9", 5);
+            updateSumCell(tableID, "rows", "sum-10", 6);
+            updateSumCell(tableID, "rows", "sum-11", 7);
+            updateSumCell(tableID, "rows", "sum-12", 8);
+            updateSumCell(tableID, "rows", "sum-13", 9);
+        }
+
+    </script>
+
+</head>
+<body>
+    <h2>Count Columns/Rows</h2>
+    <table id="table-kicks">
+        <tr>
+            <td id="cell-1">0</td>
+            <td id="cell-2">1</td>
+            <td id="cell-3">2</td>
+            <td id="cell-4">3</td>
+            <td id="cell-5">4</td>
+            <td id="cell-6">5</td>
+            <td id="cell-7">6</td>
+            <td id="cell-8">7</td>
+            <td id="cell-9">8</td>
+            <td id="cell-10">9</td>
+            <td class="last-column" id="sum-1">0</td>
+        </tr>
+        <tr>
+            <td id="cell-11">2</td>
+            <td id="cell-12">4</td>
+            <td id="cell-13">6</td>
+            <td id="cell-14">8</td>
+            <td id="cell-15">10</td>
+            <td id="cell-16">12</td>
+            <td id="cell-17">14</td>
+            <td id="cell-18">16</td>
+            <td id="cell-19">18</td>
+            <td id="cell-20">20</td>
+            <td class="last-column" id="sum-2">0</td>
+        </tr>
+        <tr>
+            <td id="cell-21">1</td>
+            <td id="cell-22">3</td>
+            <td id="cell-23">5</td>
+            <td id="cell-24">7</td>
+            <td id="cell-25">9</td>
+            <td id="cell-26">11</td>
+            <td id="cell-27">13</td>
+            <td id="cell-28">15</td>
+            <td id="cell-29">17</td>
+            <td id="cell-30">19</td>
+            <td class="last-column" id="sum-3">0</td>
+        </tr>
+        <tr class="last-row">
+            <td class="last-row" id="sum-4">0</td>
+            <td class="last-row" id="sum-5">0</td>
+            <td class="last-row" id="sum-6">0</td>
+            <td class="last-row" id="sum-7">0</td>
+            <td class="last-row" id="sum-8">0</td>
+            <td class="last-row" id="sum-9">0</td>
+            <td class="last-row" id="sum-10">0</td>
+            <td class="last-row" id="sum-11">0</td>
+            <td class="last-row" id="sum-12">0</td>
+            <td class="last-row" id="sum-13">0</td>
+            <td class="last-row" id="sum-14">0</td>
+        </tr>
+    </table>
+<script type="application/javascript">
+    batchUpdateSumCells("table-kicks");
+</script>
+</body>
+</html>
